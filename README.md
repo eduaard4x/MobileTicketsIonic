@@ -17,6 +17,6 @@ ionic serve
 
 ## prints das tabs
 
-![Tela 1](link1)
+![Tela 1](https://raw.githubusercontent.com/eduaard4x/MobileTicketsIonic/main/Captura%20de%20tela%202026-04-03%20193337.png)
 ![Tela 2](link2)
 ![Tela 3](link3)
