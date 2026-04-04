@@ -1,17 +1,29 @@
-<ion-header [translucent]="true">
+<ion-header>
   <ion-toolbar>
-    <ion-title>
-      Tab 1
-    </ion-title>
+    <ion-title>Controle de Atendimento</ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Tab 1</ion-title>
-    </ion-toolbar>
-  </ion-header>
+<ion-content class="ion-padding">
 
-  <app-explore-container name="Tab 1 page"></app-explore-container>
+  <ion-button expand="block" (click)="gerarSP()">Gerar Senha Prioritária (SP)</ion-button>
+  <ion-button expand="block" (click)="gerarSG()">Gerar Senha Geral (SG)</ion-button>
+  <ion-button expand="block" (click)="gerarSE()">Gerar Senha Exame (SE)</ion-button>
+
+  <ion-button expand="block" color="danger" (click)="chamar()">Chamar Próxima</ion-button>
+
+  <h2>Fila</h2>
+
+  <h3>Prioritária (SP)</h3>
+  <div *ngFor="let s of filaSP">{{ s }}</div>
+
+  <h3>Exame (SE)</h3>
+  <div *ngFor="let s of filaSE">{{ s }}</div>
+
+  <h3>Geral (SG)</h3>
+  <div *ngFor="let s of filaSG">{{ s }}</div>
+
+  <h2>Últimas chamadas</h2>
+  <div *ngFor="let s of ultimas">{{ s }}</div>
+
 </ion-content>
